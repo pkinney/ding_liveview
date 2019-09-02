@@ -1,0 +1,4 @@
+<section class="phx-hero">
+  <h1><%= gettext "Ding Dong" %></h1>
+  <p><%= link "Start Here", to: Routes.live_path(@conn, DingWeb.DingLive)%></p>
+</section>
