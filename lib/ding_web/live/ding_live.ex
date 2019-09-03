@@ -3,7 +3,6 @@ defmodule DingWeb.DingLive do
 
   alias Ding.Messages
   alias DingWeb.DingView
-  alias DingWeb.Router.Helpers, as: Routes
 
   def mount(_session, socket) do
     if connected?(socket), do: Messages.subscribe()
