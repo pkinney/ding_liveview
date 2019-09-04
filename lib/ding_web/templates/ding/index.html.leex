@@ -1,7 +1,7 @@
 <h1>Messages</h1>
 
 <%= f = form_for :message, "#", [phx_submit: :send_message] %>
-  <%= text_input f, :body %>
+  <%= text_input f, :body, autocomplete: "off" %>
   <div>
     <%= submit "Send", phx_disable_with: "Sending..." %>
   </div>
