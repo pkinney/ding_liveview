@@ -9,7 +9,19 @@ defmodule Ding.MixProject do
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      releases: releases(),
+      default_release: :ding
+    ]
+  end
+
+  defp releases do
+    [
+      ding: [
+        include_erts: true,
+        include_executables_for: [:unix],
+        applications: [runtime_tools: :permanent]
+      ]
     ]
   end
 
